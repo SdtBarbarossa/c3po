@@ -1,8 +1,19 @@
-'use strict';
-var http = require('http');
-var port = process.env.PORT || 1337;
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
-http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World\n');
-}).listen(port);
+client.on('ready', () => {
+    console.log('I am ready!');
+});
+
+client.on('message', message => {
+
+    if (message.content.toLowerCase() === 'hello there' || message.content.toLowerCase() === 'hello there') {
+        message.reply('General Kenobi!');
+    }
+
+});
+
+
+
+// THIS  MUST  BE  THIS  WAY
+client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
