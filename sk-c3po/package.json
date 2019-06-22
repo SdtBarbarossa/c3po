@@ -1,0 +1,9 @@
+{
+  "name": "sk-c3po",
+  "version": "0.0.0",
+  "description": "sk-c3po",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
